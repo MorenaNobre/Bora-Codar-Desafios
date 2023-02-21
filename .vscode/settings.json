@@ -11,6 +11,7 @@
   "editor.formatOnPaste": true,
   "files.autoSave": "afterDelay",
   "editor.tabCompletion": "on",
+  "editor.wordWrapColumn": 86,
 
   // explorer
   "explorer.compactFolders": false,

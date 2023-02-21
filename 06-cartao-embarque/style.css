@@ -21,7 +21,6 @@ body {
   display: grid;
   place-content: center;
   position: relative;
-
 }
 
 body::before {
@@ -78,7 +77,7 @@ h1 {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.64);
+  color: rgba(0, 0, 0, 0.79);
   font-size: 1.4rem;
   line-height: 1.7rem;
 }
@@ -91,32 +90,90 @@ strong {
 
 section {
   /* background-color: #fff; */
+  background: rgba(255, 255, 255, 0.2);
   padding: 2.4rem 3.2rem;
+
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 #boarding-pass {
-  max-width: 32.7rem;
   margin: auto;
 }
 
 #ticket {
   margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2.2px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(2.2px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 1;
+  border-radius: 2.4rem;
+  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */
+  filter: drop-shadow(6px 5px 3px rgba(0, 0, 0, 0.5));
+
 }
 
 .top {
   border-radius: 2.4rem 2.4rem 0 0;
   gap: 2.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  --mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 100%, black) -1.2rem;
+}
+
+.departure,
+.arrival {
+  width: 12.5rem;
+}
+
+.departure strong,
+.arrival strong {
+  font-size: 4rem;
+  line-height: 4.7rem;
+}
+
+.airplane {
+  align-self: center;
+}
+
+.top time {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.top time sup {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+dt time {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  background: #663bbc;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+.middle {
+  border: 1px dashed rgba(0, 0, 0, 0.52);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  --mask: radial-gradient(1.2rem at 1.2rem 1.2rem, transparent 95%, black) -1.2rem -1.2rem;
 }
 
 .bottom {
   border-radius: 0 0 2.4rem 2.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem;
 }
 
 .bottom .container {
@@ -135,6 +192,10 @@ dl.grid {
   font-size: 1.6rem;
   line-height: 2rem;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.qrcode.grid {
+  justify-items: center;
 }
 
 footer {
