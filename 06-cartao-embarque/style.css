@@ -15,7 +15,7 @@ body {
   font-family: "Rubik", sans-serif;
   letter-spacing: -0.02em;
 
-  background: linear-gradient(167.96deg, #8257e5 0%, #271a45 100%) no-repeat;
+  background: linear-gradient(167.96deg, #8257e5 0%, #271a45 100%) no-repeat fixed;
 
   height: 100vh;
   display: grid;
@@ -90,7 +90,7 @@ strong {
 
 section {
   /* background-color: #fff; */
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   padding: 2.4rem 3.2rem;
 
   -webkit-mask: var(--mask);
@@ -109,7 +109,6 @@ section {
   /* border: 1px solid rgba(255, 255, 255, 0.8); */
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); */
   filter: drop-shadow(6px 5px 3px rgba(0, 0, 0, 0.5));
-
 }
 
 .top {
@@ -120,6 +119,9 @@ section {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 
   --mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 100%, black) -1.2rem;
+
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
 }
 
 .departure,
@@ -174,6 +176,9 @@ dt time {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 
   --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem;
+
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
 }
 
 .bottom .container {

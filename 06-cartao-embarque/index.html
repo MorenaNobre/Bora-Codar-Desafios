@@ -12,12 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
     <div id="boarding-pass">
       <h1>Cartão de embarque</h1>
       <span data-tilt>
-        <main id="ticket">
+        <main id="ticket" class="glass">
           <section class="top grid">
             <div class="flight grid column">
               <div class="number">
@@ -87,8 +88,15 @@
     </div>
 
     <script src="tilt.jquery.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector("#ticket"), {
+        max: 15,
+        speed: 400,
+      })
+    </script>
   </body>
 </html>
 
-
 <!-- https://gijsroge.github.io/tilt.js/ -->
+<!-- https://www.w3schools.com/jquery/jquery_get_started.asp -->
