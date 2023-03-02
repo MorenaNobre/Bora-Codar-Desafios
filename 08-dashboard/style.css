@@ -13,10 +13,51 @@
 body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
+  background-color: #292738;
 }
 
 .grid {
   display: grid;
+}
+
+.top {
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.bottom {
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.bottom .item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bottom .item span:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bottom .item span {
+  --bg-color: #4a4556;
+}
+
+.bottom .item span:nth-child(1)::before {
+  content: " ";
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  background: var(--bg-color);
+  border-radius: 999px;
 }
 
 .box {
@@ -26,17 +67,20 @@ body {
   box-shadow: 0.3rem 0.4rem 2.6rem rgba(0, 0, 0, 0.25);
   border-radius: 0.6rem;
   color: white;
+  line-height: 160%;
 }
 
 #app {
-  background-color: #292738;
+  grid-template-columns: 29.6rem max-content max-content;
+  grid-template-rows: max-content;
   column-gap: 3.2rem;
   row-gap: 5.9rem;
 
-  width: 100vw;
-  height: 100vh;
-
-  padding: 11.2rem 12.3rem;
+  width: fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  min-width: 100vw;
+  place-content: center;
 }
 
 .box:nth-child(4) {
@@ -44,12 +88,6 @@ body {
 }
 
 .nps {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 160%;
-  text-align: center;
-
-  width: 29.6rem;
   gap: 3.2rem;
 }
 
@@ -62,9 +100,5 @@ body {
 }
 
 .nps .bottom {
-  font-weight: 500;
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: center;
   gap: 1rem;
 }
