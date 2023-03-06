@@ -102,3 +102,20 @@ body {
 .nps .bottom {
   gap: 1rem;
 }
+
+.middle {
+  display: grid;
+  place-content: center;
+}
+
+svg {
+  width: 19.7rem;
+  height: 19.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 618;
+  stroke-dashoffset: 618;
+  stroke-width: 35;
+  fill: none;
+}
