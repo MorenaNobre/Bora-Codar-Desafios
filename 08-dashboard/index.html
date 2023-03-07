@@ -16,7 +16,7 @@
   <body>
     <main id="app" class="grid">
       <div class="box nps grid">
-        <div class="top">NPS geral</div>
+        <div class="top text-center">NPS geral</div>
         <div class="middle grid">
           <img src="./assets/smile.svg" alt="emoji verde sorrindo" />
           Excelente
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="box sale grid">
-        <div class="top">Vendas fechadas</div>
+        <div class="top text-center">Vendas fechadas</div>
         <div class="middle">
           <svg viewBox="0 0 232 232" style="--percentage: 70">
             <circle
@@ -57,6 +57,10 @@
               </linearGradient>
             </defs>
           </svg>
+          <div class="content">
+            <h3>70%</h3>
+            <p>alcançada</p>
+          </div>
         </div>
         <div class="bottom">
           <div class="item">
@@ -79,7 +83,7 @@
         </div>
       </div>
       <div class="box target grid">
-        <div class="top">Meta mensal</div>
+        <div class="top text-center">Meta mensal</div>
         <div class="middle">
           <svg viewBox="0 0 232 232" style="--percentage: 90">
             <circle
@@ -109,6 +113,10 @@
               </linearGradient>
             </defs>
           </svg>
+          <div class="content">
+            <h3>90%</h3>
+            <p>alcançada</p>
+          </div>
         </div>
         <div class="bottom">
           <div class="item">
@@ -130,7 +138,22 @@
           </div>
         </div>
       </div>
-      <!-- <div class="box"></div> -->
+      <div class="box weekly-sales grid">
+        <div class="top">Vendas por dia da semana</div>
+        <div class="wrapper">
+          <div class="left grid">
+            <div class="most-sale grid">
+              <span>Dias com mais vendas</span>
+              quarta-feira
+            </div>
+            <div class="less-sale grid">
+              <span>Dias com menos vendas</span>
+              domingo
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

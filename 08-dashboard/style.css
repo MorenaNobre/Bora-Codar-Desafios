@@ -20,10 +20,31 @@ body {
   display: grid;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .top {
   font-weight: 600;
   font-size: 2.4rem;
+}
+
+.middle {
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.middle .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.content h3 {
+  font-size: 3.4rem;
 }
 
 .bottom {
@@ -103,11 +124,6 @@ body {
   gap: 1rem;
 }
 
-.middle {
-  display: grid;
-  place-content: center;
-}
-
 svg {
   --percentage: 0;
   width: 19.7rem;
@@ -138,4 +154,47 @@ svg circle:nth-child(2) {
     stroke-dasharray: 618;
     stroke-dashoffset: 618;
   }
+}
+
+.weekly-sales {
+  gap: 3.2rem;
+}
+
+.weekly-sales .wrapper {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.weekly-sales .left {
+  gap: 3.2rem;
+}
+
+.left .grid {
+  gap: 0.8rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.left .grid span {
+  font-size: 1.4rem;
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.left .grid span::before {
+  content: " ";
+  width: 15px;
+  height: 15px;
+  display: block;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.left .most-sale span::before {
+  background: linear-gradient(180deg, #81fbb8 0%, #28c76f 100%);
+}
+
+.left .less-sale span::before {
+  background: linear-gradient(180deg, #ea5455 0%, #feb692 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
 }
