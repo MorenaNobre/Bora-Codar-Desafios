@@ -17,16 +17,18 @@
     <div id="app">
       <div id="player-1" class="player">
         <div class="wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1541356665065-22676f35dd40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=387&q=60"
-            alt=""
-          />
+          <div class="img-area">
+            <img
+              src="https://images.unsplash.com/photo-1541356665065-22676f35dd40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=387&q=60"
+              alt=""
+            />
+          </div>
           <div class="info">
-            <h1>Acorda Devinho</h1>
-            <p>Banda Rocketseat</p>
+            <h1 class="name">Acorda Devinho</h1>
+            <p class="artist">Banda Rocketseat</p>
           </div>
           <div class="controls">
-            <div class="prev">
+            <div class="prev btnC" id="prev-A">
               <svg
                 width="30"
                 height="30"
@@ -40,7 +42,7 @@
                 />
               </svg>
             </div>
-            <div class="play">
+            <div class="play btnC" id="play-A">
               <svg
                 width="30"
                 height="30"
@@ -54,7 +56,7 @@
                 />
               </svg>
             </div>
-            <div class="next">
+            <div class="next btnC" id="next-A">
               <svg
                 width="29"
                 height="30"
@@ -86,6 +88,11 @@
             <div class="time">
               <div class="total-time">03:20</div>
               <div class="last-time">00:12</div>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+                <audio src="assets/songs/song-1.mp3" id="main-audio"></audio>
+              </div>
             </div>
           </div>
         </div>
@@ -163,6 +170,11 @@
             <div class="time">
               <div class="total-time">03:20</div>
               <div class="last-time">00:12</div>
+            </div>
+            <div class="progress-area">
+              <div class="progress-bar">
+                <audio src="assets/songs/song-2.mp3" id="main-audio"></audio>
+              </div>
             </div>
           </div>
         </div>
