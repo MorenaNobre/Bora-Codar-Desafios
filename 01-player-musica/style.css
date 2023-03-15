@@ -14,7 +14,7 @@
   --bg02: linear-gradient(135deg, #2f3439, #1d1f23);
   --bg03: linear-gradient(135deg, #2c3136, #1d2023);
   --bg04: #040404;
-  --border01: #22262a;
+  --border01: #322751;
   --border02: #1a1d21;
 
   /************ box-shadow ***************/
@@ -101,7 +101,7 @@ body {
   height: 84px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid var(--border02);
+  border: 6px solid #322751;
   box-shadow: var(--box-shadow03);
 }
 
@@ -183,6 +183,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .prev:active {
@@ -237,7 +238,7 @@ body {
 .progress-bar::after {
   content: "";
   position: absolute;
-  background: #e1530a;
+  background: #7c64c9;
   box-shadow: var(--box-shadow05);
   border-radius: 50%;
   top: 50%;
@@ -250,6 +251,20 @@ body {
   pointer-events: none;
   transform: translateY(-50%);
   transition: all 0.2s ease;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+  transform-origin: center;
+}
+
+@keyframe rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 @media (max-width: 670px) {
