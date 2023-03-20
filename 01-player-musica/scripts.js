@@ -9,7 +9,7 @@ const wrapper = document.querySelector(".wrapper"),
   progressArea = wrapper.querySelector(".progress-area"),
   progressBar = progressArea.querySelector(".progress-bar")
 
-let musicIndex = Math.floor(Math.random() * allMusic.lenght + 1)
+let musicIndex = Math.floor((Math.random() * allMusic.length) + 1)
 isMusicPaused = true
 
 window.addEventListener("load", () => {
@@ -23,3 +23,16 @@ function loadMusic(indexNumb) {
   mainAudio.src = `assets/songs/${allMusic[indexNumb - 1].src}.mp3`
 }
 
+function playMusic() {
+  wrapper.classList.add("paused")
+  musicImg.classList.add("rotate")
+  // playPauseBtn.innerHTML = `<i class="fi fi-sr-pause"></i>`
+  mainAudio.play()
+}
+
+function pauseMusic() {
+  wrapper.classList.remove("paused")
+  musicImg.classList.remove("rotate")
+  // playPauseBtn.innerHTML = `<i class="fi fi-sr-play"></i>`
+  mainAudio.pause()
+}
